@@ -70,12 +70,6 @@ class CalculoTasaInteres:
             else:
                 print("❌ Tasa requerida: MUY ALTA (> 100% anual) - Puede no ser realista")
             
-            print(f"\n--- TASAS DE REFERENCIA ---")
-            print("Tasa de ahorro típica: 1% - 5% anual")
-            print("Tasa de inversión conservadora: 5% - 10% anual")
-            print("Tasa de inversión moderada: 10% - 15% anual")
-            print("Tasa de inversión agresiva: 15% - 25% anual")
-            
             print("="*70)
             
             return tasa_anual_compuesto, tasa_anual_simple
