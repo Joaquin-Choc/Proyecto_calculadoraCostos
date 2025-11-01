@@ -8,6 +8,7 @@ from modulos.bonos import CalculadoraBonos
 from modulos.valor_presente import ValorPresente
 from modulos.vna import CalculadoraVNA
 from modulos.tir import CalculadoraTIR
+from modulos.pago import CalculadoraPago
 
 class CalculadoraFinanciera:
     def __init__(self):
@@ -21,7 +22,8 @@ class CalculadoraFinanciera:
             '7': CalculadoraBonos(),
             '8': ValorPresente(),
             '9': CalculadoraVNA(),
-            '10': CalculadoraTIR()
+            '10': CalculadoraTIR(),
+            '11': CalculadoraPago()
         }
     
     def mostrar_menu(self):
@@ -38,7 +40,8 @@ class CalculadoraFinanciera:
         print("8. Calcular Valor Presente")
         print("9. Calcular VNA (Valor Neto Actual)")
         print("10. Calcular TIR (Tasa Interna de Retorno)")
-        print("11. Salir")
+        print("11. Calcular Pago (PAGO)")
+        print("12. Salir")
         print("="*50)
     
     def ejecutar(self):
@@ -46,12 +49,12 @@ class CalculadoraFinanciera:
             self.mostrar_menu()
             opcion = input("Seleccione una opción: ")
             
-            if opcion == "11":
+            if opcion == "12":
                 print("¡Gracias por usar la calculadora financiera!")
                 break
             elif opcion in self.modulos:
                 self.modulos[opcion].ejecutar()
             else:
-                print("Opción no válida. Por favor, seleccione 1-11.")
+                print("Opción no válida. Por favor, seleccione 1-12.")
             
             input("\nPresione Enter para continuar...")
